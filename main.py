@@ -55,7 +55,7 @@ def run():
 
 
     gc = gspread.service_account(filename="creds.json") 
-    sh = gc.open('prices').worksheet("Scraped") 
+    sh = gc.open('NEW KITCO_LIVE PRICES').worksheet("Scraped") 
 
     sh.update(data_list)
     print("Metal prices sent to Google Sheets successfully!")
