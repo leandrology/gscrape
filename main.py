@@ -1,18 +1,22 @@
 import requests
 from bs4 import BeautifulSoup
 import gspread
-from selenium import webdriver
-from selenium.webdriver.common.by import By
 from fake_useragent import UserAgent
 import time
-import schedule 
+import schedule
 
-options = webdriver.ChromeOptions()
-options.add_argument('--headless')
-driver = webdriver.Chrome(options=options)
-user_agent = UserAgent()
+# Set headers with a random user agent
+headers = {'User-Agent': UserAgent().desktop}
 
-headers = {'User-Agent': user_agent.desktop}
+
+# # Parse HTML content with Beautiful Soup
+# soup = BeautifulSoup(content, "html.parser")
+# options = webdriver.ChromeOptions()
+# options.add_argument('--headless')
+# driver = webdriver.Chrome(options=options)
+# user_agent = UserAgent()
+
+# headers = {'User-Agent': user_agent.desktop}
 def run():
     url = "https://www.kitco.com/price/precious-metals"
     response = requests.get(url, headers=headers)
