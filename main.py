@@ -39,13 +39,13 @@ def run():
     for li in items.find_all("li"):
       div = li.find("div", class_="BidAskGrid_gridifier__l1T1o")
       metal = div.find("span", class_="BidAskGrid_bold__vjdF5").text.strip()
-      date = div.find_all("span")[1].text.strip()
-      time = div.find_all("span")[2].text.strip()
-      bid = div.find_all("span")[3].text.strip()
-      ask = div.find_all("span")[4].text.strip()
-      change_value = div.find("div", class_="BidAskGrid_changeUp__snqc8").text.strip()
-      low = div.find_all("span")[5].text.strip()
-      high = div.find_all("span")[6].text.strip()
+    #   date = div.find_all("span")[1].text.strip()
+    #   time = div.find_all("span")[2].text.strip()
+    #   bid = div.find_all("span")[3].text.strip()
+    #   ask = div.find_all("span")[4].text.strip()
+    #   change_value = div.find("div", class_="BidAskGrid_changeUp__snqc8").text.strip()
+    #   low = div.find_all("span")[5].text.strip()
+    #   high = div.find_all("span")[6].text.strip()
      
       is_rhodium = metal == "Rhodium"  
       if is_rhodium:
