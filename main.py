@@ -38,7 +38,9 @@ def run():
     row = 1
     for li in items.find_all("li"):
       div = li.find("div", class_="BidAskGrid_gridifier__l1T1o")
+      print ("Here's the div: ", div)
       metal = div.find("span", class_="BidAskGrid_bold__vjdF5").text.strip()
+      print ("Here's the metal: ", metal)
     #   date = div.find_all("span")[1].text.strip()
     #   time = div.find_all("span")[2].text.strip()
     #   bid = div.find_all("span")[3].text.strip()
@@ -47,9 +49,9 @@ def run():
     #   low = div.find_all("span")[5].text.strip()
     #   high = div.find_all("span")[6].text.strip()
      
-      is_rhodium = metal == "Rhodium"  
-      if is_rhodium:
-          metal = div.find("span", class_="pl-[10px] !border-0").text.strip()  
+      is_rhodium = "Rhodium"  
+      if metal == is_rhodium :
+          metal = div.find("span", class_="pl-[10px]").text.strip()  
       
       data_points = []
       for span in div.find_all("span"):
