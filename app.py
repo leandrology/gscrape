@@ -6,12 +6,14 @@ def check_ranking(keyword, website):
     headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"}
     
     response = requests.get(url, headers=headers)
+    print (response)
     soup = BeautifulSoup(response.text, 'html.parser')
-    
+    print (soup)
     search_results = soup.find_all('div', class_='yuRUbf')
-    
+    print (search_results)
     for index, result in enumerate(search_results, start=1):
         link = result.find('a')['href']
+        print (link)
         if website in link:
             return index
     

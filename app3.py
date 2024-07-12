@@ -47,9 +47,9 @@ def save_to_csv(results, filename):
 # Example usage
 website = "greenproenergy.ie"
 keywords = [
-    "seai grants Ireland",
-"energy Ireland",
 "ber rating Ireland",
+"seai grants Ireland",
+"energy Ireland",
 "air tightness test Ireland",
 "home energy assessment Ireland",
 "energy grants Ireland",
